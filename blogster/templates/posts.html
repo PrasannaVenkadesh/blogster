@@ -1,0 +1,64 @@
+{% extends 'base.html' %}
+{% load comments %}
+{% block content %}
+
+<div id='left-side-bar'>
+	{% if posts %}
+		{% for post in posts %}
+		<div class='post-header'>
+			<h2><a href="/{{ post.get_absolute_url }}">{{ post.title }}</a></h2>
+			<small> - by {{ post.author.first_name }} on {{ post.pub_date }}</small>
+		</div>
+
+		<div class='post-description'>
+			{% if post.description %}
+				{{ post.description }}
+			{% else %}
+				Please add a description
+			{% endif %}
+		</div>
+			
+			{% get_comment_count for post as comment_count %}
+			<br>
+			<small>Comments: {{ comment_count }}</small>
+
+			<div class='post-category'>
+				<p>Posted in 
+				{% if post.categories.all %}
+					{% for category in post.categories.all %}
+						{{ category.title }}
+					{% endfor %}
+				{% else %}
+					None
+				{% endif %}
+				</p>
+			</div>
+
+		{% endfor %}
+	
+		<br><br>
+		{% if page.has_next %}
+			<a href="{{ page.next_page_number }}">Older Posts</a>
+		{% endif %}
+	
+		{% if page.has_previous %}
+			<a href="{{ page.previous_page_number }}">New Posts</a>
+		{% endif %}
+	
+		{% else %}
+		<div>
+			No posts matched
+		</div>
+		{% endif %}
+</div>
+
+<div id='right-side-bar'>
+	<div id='category-list'>
+		<h2>Categories</h2>
+		{% for category in categories %}
+			<p><a href='/blog/{{ category.get_absolute_url }}'>{{ category }}</a></p>
+		{% endfor %}
+	</div>
+</div>
+
+{% endblock %}

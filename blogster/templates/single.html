@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load comments %}
+
+<div id='left-side-bar'>
+	{% for post in posts %}
+	<div class='post-header'>
+		<h2><a href='#'>{{ post.title }}</a></h2>
+		<small> - by {{ post.author.first_name }} on {{ post.pub_date }}</small>
+	</div>
+	
+	<div class='post-container'>
+		{{ post.text|safe }}
+	</div>
+	
+	<div class='post-category post-content'>
+		<p> Posted in 
+		{% if post.categories.all %}
+			{% for category in post.categories.all %} 
+				{{ category.title }} 
+			{% endfor %}
+		{% else %}
+			None
+		{% endif %}</p>
+	</div>
+	
+	{% get_comment_count for post as comment_count %}
+	Comments: {{ comment_count }}
+	<ol>
+		{% get_comment_list for post as comments %}
+		{% for comment in comments %}
+			<li>{{ comment.name }} says:<br>{{ comment.comment }}</li>
+		{% endfor %}
+	</ol>
+	
+	<hr>
+	<b>Leave a reply</b>
+	{% render_comment_form for post %}
+	{% endfor %}
+</div>
+
+<div id='right-side-bar'>
+	<div id='category-list'>
+		<h2>Categories</h2>
+		{% for category in categories %}
+			<p><a href='/blog/{{ category.get_absolute_url }}'>{{ category }}</a></p>
+		{% endfor %}
+	</div>
+</div>
+
+{% endblock %}

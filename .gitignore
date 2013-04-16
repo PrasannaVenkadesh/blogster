@@ -1,0 +1,9 @@
+#database files
+backend.db
+
+#settings files
+myblog/settings.py
+
+#auto-generated files
+*.pyc
+

@@ -1,0 +1,201 @@
+body {
+	background: url('/static/images/wavegrid.png/');
+	font-family: 'Ubuntu', sans-serif;
+}
+
+.name {
+	color: #707070;
+}
+
+.blog-heading {
+	font-family: 'Sacramento', cursive;
+	color: #3B2769;
+	font-size: 3.5em;
+	line-height: 2;
+	font-weight: 200;
+	text-align: center;
+	margin-bottom: 0.2em;
+	text-decoration: none;
+	margin-bottom: -20px;
+}
+
+.blog-tagline {
+	font-size: 12px;
+	margin-top: -30px;
+	font-weight: 100;
+	text-align: center;
+}
+
+.layout-default #container {
+	border-radius: 5px 5px;
+	box-shadow: 0px 0px 27px #808080;
+}
+
+#wrapper {
+	margin: 0px auto;
+	padding: 0px;
+	width: 960px;
+}
+
+.navbar {
+	border-top: 1px solid rgba(0,0,0,0.4);
+	border-bottom: 1px solid rgba(0,0,0,0.4);
+	background-color: #e0e0e0;
+}
+
+.menu_item {
+	list-style: none;
+	display: inline-block;
+	padding: 17px 25px;
+}
+
+#container {
+	width: 880px; 
+	min-height: 100px;
+	background: white;
+	margin: 30px auto 0px;
+	padding: 20px 40px;
+	overflow: hidden;
+}
+
+#left-side-bar {
+	float: left;
+	width: 570px;
+	border-right: 1px solid rgba(0,0,0,0.1);
+}
+
+.post-header h2 {
+	margin-bottom: 2px;
+}
+
+.post-header h2 a{
+	font-size: 25px;
+	text-decoration: none;
+	font-weight: 100;
+	color: rgba(28,5,83,0.8);
+}
+
+.post-header small {
+	line-height: 1;
+	font-weight: 40;
+	padding-left: 10px;
+	color: rgba(100,100,100,0.7);
+}
+
+.post-description, .post-content {
+	font-size: 15px;
+	font-weight: 90;
+}
+
+.post-description {
+	color: #444444;
+	padding-top: 20px;
+}
+
+.post-content {
+	font-size: 14px;
+	font-weight: 20px;
+	color: rgba(0,0,0,0.9);
+	padding-top: 10px;
+	text-align: justify;
+	width: 520px;
+	padding-bottom: 5px;
+}
+
+.post-container {
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+.post-category p {
+	font-size: 12px;
+	background-color: rgba(220,220,220,0.9);
+	border-top: 1px solid rgba(0,0,0,0.2);
+	border-bottom: 1px solid rgba(0,0,0,0.2);
+	color: rgba(100,100,100,0.8);
+	padding-top: 2px;
+	padding-left: 3px;
+	padding-bottom: 2px;
+}
+
+#right-side-bar {
+	float: right;
+	width: 280px;
+}
+
+
+a {
+	text-decoration: none;
+}
+
+.menu_item a {
+	color: rgba(119, 119, 119, 0.7);
+}
+
+.menu_item a:hover {
+	color: black;
+}
+
+.slide {
+	margin-top: 20px;
+	width: 450px;
+	height: 400px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, .8);
+}
+
+.circular {
+	width: 240px;
+	height: 240px;
+	float: left;
+	border-radius: 120px;
+	-webkit-border-radius: 120px;
+	-moz-border-radius: 100px;
+	box-shadow: 0 0 10px rgba(33, 1, 1, 0.8);
+	-webkit-box-shadow: 0 0 8px rgba(0, 0, 0, .8);
+	-moz-box-shadow: 0 0 8px rgba(0, 0, 0, .8);
+}
+
+.name {
+	font-family: 'Merienda', cursive;
+	font-size: 64px;
+	margin-left: 35px;
+}
+
+.tagline {
+	font-family: 'Sacramento', cursive;
+	font-size: 22px;
+	margin-top: 1px;
+	margin-left: 20px;
+	text-shadow: 0 0 15px silver;
+	color: rgb(36, 202, 218);
+	font-weight: bold;
+}
+
+.description {
+	font-family: 'Merienda', cursive;
+	font-size: 18px;
+	margin-left: 20px;
+	padding: 2px;
+	margin-top: 1px;
+	color: #444444;
+}
+
+.footer {
+	text-align: center;
+	margin-top: 20px;
+	padding-bottom: 20px;
+}
+
+.footer h5 {
+	color: gray;
+	font-weight: 100;
+	margin: 3px 3px auto;
+	padding: 2px 2px auto;
+	display: block;
+}
+
+.youtube-video {
+	width: 520px;
+	height: 320px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, .8);
+}

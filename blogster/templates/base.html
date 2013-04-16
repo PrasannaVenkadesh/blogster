@@ -1,0 +1,33 @@
+<html>
+	<head>
+		<title>Pras's press</title>
+		<meta content="width=device-width,initial-scale=1" name="viewport">
+		<link href='http://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" type="text/css" href="/static/style.css">
+		<link href='http://fonts.googleapis.com/css?family=Sacramento' rel='stylesheet' type='text/css'>
+	</head>
+
+	<body class='layout-default'>
+		<div id='wrapper'>
+			<h1 class='blog-heading'><a href='/blog/'>Prasanna's Blog</a></h1>
+			<h3 class='blog-tagline'>Left by Default</h3>
+			<div class='menu'>
+				<ul class='navbar'>
+					<li class='menu_item'><a href='/blog/'>Home</a></li>|
+					<li class='menu_item'><a href='https://github.com/prasannavenkadesh' target='_blank'>Projects</a></li>|
+					<li class='menu_item'><a href='/about/'>About Me</a></li>|
+					<li class='menu_item'><a href='http://prashere.wordpress.com' target='_blank'>Old Blog</a></li>|
+					<li class='menu_item'></li>
+				</ul>
+			</div>
+			<div id='container'>
+				{% block content %}
+				{% endblock %}
+			</div>
+		</div>
+		<div class='footer'>
+			<h5>Copyright Prasanna Venkadesh</h5>
+			<h5>Powered by Django &amp; Sqlite3</h5>
+		</div>
+	</body>
+</html>
