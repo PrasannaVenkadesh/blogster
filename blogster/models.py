@@ -1,3 +1,5 @@
+import datetime
+from django.utils import timezone
 from django.db import models
 from django.contrib.auth.models import User
 
@@ -26,6 +28,10 @@ class Post(models.Model):
 
 	def __unicode__(self):
 		return self.title
+
+	def was_recently_published(self):
+		now = timezone.now()
+		return now - datetime.timedelta(days=8) <= self.pub_date < now
 
 	def get_absolute_url(self):
 		return "%s/%s/%s/%s" % ("blog", self.pub_date.year, self.pub_date.month, self.slug)
