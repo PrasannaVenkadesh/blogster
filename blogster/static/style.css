@@ -123,6 +123,36 @@ body {
 	width: 280px;
 }
 
+#right-side-bar h2 {
+	color: rgba(199,168,67,1);
+	letter-spacing: -2px;
+	font-weight: 50px;
+}
+
+#category-list p {
+	font-size: 15px;
+}
+
+#category-list p a {
+	text-decoration: none;
+}
+
+#recent-post-list p {
+	font-size: 14px;
+}
+
+#recent-post-list p a {
+	text-decoration: none;
+	color: gray;
+}
+
+#recent-post-list p a:hover {
+	color: black;
+}
+
+#tweets p {
+	font-size: 14px;
+}
 
 a {
 	text-decoration: none;

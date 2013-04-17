@@ -1,5 +1,6 @@
 {% extends 'base.html' %}
 {% load comments %}
+{% load twitter_tag %}
 {% block content %}
 
 <div id='left-side-bar'>
@@ -70,6 +71,16 @@
 			<p>No recent posts</p>
 		{% endif %}
 	</div>
+
+	<div id='tweets'>
+		{% get_tweets for 'imprashere' as tweets exclude 'retweets' limit 5 %}
+		<h2>Recent Tweets</h2> 
+		<small><a href="http://twitter.com/imprashere" target='_blank'>@imprashere</a></small>
+			{% for tweet in tweets %}
+				<p style='border-bottom: 0.2px solid rgba(4,4,4,0.1)'>{{ tweet.html | safe }}</p>
+			{% endfor %}
+	</div>
+
 </div>
 
 {% endblock %}
